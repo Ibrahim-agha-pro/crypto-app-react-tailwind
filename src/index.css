@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #add8e6;
+  --color-secondary: rgb(255, 255, 255);
+  --color-muted: #a0a0b0;
+  --color-border: rgb(255 255 255 / 0.1);
+  --color-danger: #ff4757;
+  --color-success: #2ed573;
+}
+
+@layer base {
+  body {
+    background-color: hsl(222 47% 4%);
+    color: hsl(213 31% 91%);
+  }
+}
+
+@utility btn {
+  @apply px-6 py-2 rounded-md font-semibold border border-border cursor-pointer;
+  line-height: 1;
+}
+@utility active {
+  @apply bg-primary text-black hover:border-border hover:bg-primary;
+}
+@utility hover {
+  @apply transition duration-600 hover:bg-secondary/10 hover:border-secondary/20;
+}
+@utility dec {
+  @apply border font-bold rounded-xl border-danger/40 text-danger bg-danger/10 py-2 px-4;
+}
+@utility inc {
+  @apply border font-bold rounded-xl border-success/40 text-success bg-success/10 py-2 px-4;
+}
+@utility rank {
+  @apply bg-primary text-xs font-bold text-black py-1 px-1 sm:px-2 rounded-lg inline-block;
+}
