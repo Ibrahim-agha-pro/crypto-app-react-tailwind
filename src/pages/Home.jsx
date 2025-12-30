@@ -78,35 +78,35 @@ export const Home = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="container mx-auto px-16 py-10">
+        <div className="container mx-auto py-5 sm:py-10 px-8 sm:px-16">
           <div className="flex justify-between mb-5">
-            <div className="space-x-3">
-              <label>Sort by: </label>
+            <div className="max-sm:text-center max-sm:space-y-3 space-x-3">
+              <label className="max-sm:block">Sort by : </label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="py-2 pl-3 border border-border hover:drop-shadow-2xl transition duration-300 bg-background text-white"
+                className="max-sm:text-sm rounded-lg py-2 pl-3  border border-border hover:drop-shadow-2xl transition duration-300 bg-background text-white"
               >
                 {sortOptions.map((option) => (
                   <option
                     key={option.value}
                     value={option.value}
-                    className="text-black"
+                    className="text-white bg-black"
                   >
                     {option.label}
                   </option>
                 ))}
               </select>
             </div>
-            <div className="space-x-3">
+            <div className="sm:space-x-3 max-sm:flex max-sm:flex-col max-sm:gap-3">
               <button
-                className={`btn ${viewMode === "grid" ? "active" : "hover"}`}
+                className={`btn  ${viewMode === "grid" ? "active" : "hover"}`}
                 onClick={() => setViewMode("grid")}
               >
                 Grid
               </button>
               <button
-                className={`btn ${viewMode === "list" ? "active" : "hover"}`}
+                className={`btn  ${viewMode === "list" ? "active" : "hover"}`}
                 onClick={() => setViewMode("list")}
               >
                 List

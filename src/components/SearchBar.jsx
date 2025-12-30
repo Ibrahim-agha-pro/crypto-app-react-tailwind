@@ -18,7 +18,7 @@ export const SearchBar = () => {
     <input
       value={searchInput}
       onChange={(e) => setSearchedInput(e.target.value)}
-      className="border border-border py-3 px-6 w-full rounded-full outline-none focus:ring-primary focus:ring-1"
+      className="border  border-border py-3 px-6 w-full rounded-full outline-none focus:ring-primary focus:ring-1"
       placeholder="Search cryptos..."
     ></input>
   );

@@ -70,8 +70,8 @@ export const CoinDetail = () => {
 
   const marketCap = formatMarketCap(data.market_data.market_cap.usd);
   const volume = formatMarketCap(data.market_data.total_volume.usd);
-  const totalSupply = data.market_data.total_supply;
-  const circulatingSupply = data.market_data.circulating_supply;
+  const totalSupply = data.market_data.total_supply.toFixed(2);
+  const circulatingSupply = data.market_data.circulating_supply.toFixed(2);
   return (
     <div className="min-h-screen relative">
       <Navbar
@@ -85,7 +85,7 @@ export const CoinDetail = () => {
           </button>
         }
       />
-      <div className="container mx-auto px-16 py-10">
+      <div className="container mx-auto py-5 sm:py-10 px-8 sm:px-16">
         <div className="flex justify-between mb-6">
           <div className="flex gap-4">
             <div className="p-1 rounded-full border border-border">
@@ -177,7 +177,7 @@ export const CoinDetail = () => {
           </ResponsiveContainer>
         </div>
 
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-10">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-sm:text-center mb-10">
           <div className="p-5 border border-border space-y-2 rounded-xl">
             <h1 className="text-muted">Market Cap</h1>
             <p className="font-bold text-2xl">${marketCap}</p>
