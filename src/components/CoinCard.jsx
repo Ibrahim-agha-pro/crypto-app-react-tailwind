@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { formatMarketCap } from "../../../three-react-projcets/3-react-projects/crypto-project/src/utils/formatter";
+import { formatMarketCap } from "../utils/formatter";
 
 export const CoinCard = ({ coin }) => {
   return (
