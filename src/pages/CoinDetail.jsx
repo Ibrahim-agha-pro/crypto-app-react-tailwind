@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { fetchChartData, fetchCoinDetails } from "../api/fetchCoins";
 import { Navbar } from "../components/Navbar";
 import { ArrowLeft } from "lucide-react";
-import { formatMarketCap } from "../../../three-react-projcets/3-react-projects/crypto-project/src/utils/formatter";
+import { formatMarketCap } from "../utils/formatter";
 import {
   CartesianGrid,
   Line,
