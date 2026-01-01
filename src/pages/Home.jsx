@@ -9,7 +9,7 @@ import { Loader } from "../components/Loader";
 export const Home = () => {
   const { coinsList, searchedCoins, loading } = useContext(CoinsContext);
 
-  const [viewMode, setViewMode] = useState("grid");
+  const [viewMode, setViewMode] = useState("list");
   const [sortBy, setSortBy] = useState("market_cap_desc");
   if (!coinsList) return "loading...";
 
@@ -98,7 +98,7 @@ export const Home = () => {
                 ))}
               </select>
             </div>
-            <div className="sm:space-x-3 max-sm:flex max-sm:flex-col max-sm:gap-3">
+            <div className="sm:space-x-3 max-sm:flex-col max-sm:gap-3 max-sm:hidden">
               <button
                 className={`btn  ${viewMode === "grid" ? "active" : "hover"}`}
                 onClick={() => setViewMode("grid")}
